@@ -20,8 +20,6 @@ class Program
 
         Console.WriteLine("Anna pelaajan nimi:");
 
-        tyypit.Add(new Pelaaja(Console.ReadLine()));
-
         string pelaajanNimi = Console.ReadLine();
 
         Pelaaja pelaaja1 = new Pelaaja(pelaajanNimi);
