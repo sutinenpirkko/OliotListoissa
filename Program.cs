@@ -20,9 +20,9 @@ class Program
 
         Console.WriteLine("Anna pelaajan nimi:");
 
-        tyypit.Add(new Pelaaja(Console.ReadLine()));
-
         string pelaajanNimi = Console.ReadLine();
+
+        tyypit.Add(new Pelaaja(pelaajanNimi));
 
         Pelaaja pelaaja1 = new Pelaaja(pelaajanNimi);
 
@@ -32,6 +32,13 @@ class Program
         {
             kaveri.Arvonta();
         }
+
+        foreach (Pelaaja kaveri in tyypit)
+        {
+            Console.WriteLine(kaveri);
+        }
+
+        tyypit.Sort();
 
         foreach (Pelaaja kaveri in tyypit)
         {
