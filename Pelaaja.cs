@@ -1,4 +1,4 @@
-public class Pelaaja
+public class Pelaaja : IComparable<Pelaaja>
 {
     public string Pelaajanimi {get; private set;}
     public int Pistemaara {get; set;}
@@ -23,5 +23,15 @@ public class Pelaaja
     {
         Random random = new Random();
         Pistemaara = Pistemaara + random.Next(-11, 11) + -_bias; 
+    }
+
+    public int CompareTo(Pelaaja toinen)
+    {
+        if(this.Pistemaara > toinen.Pistemaara)
+            return -1;
+        else if(this.Pistemaara < toinen.Pistemaara)
+            return 1;
+        else
+            return 0;
     }
 }
