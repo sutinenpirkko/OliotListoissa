@@ -28,9 +28,9 @@ public class Pelaaja : IComparable<Pelaaja>
     public int CompareTo(Pelaaja toinen)
     {
         if(this.Pistemaara > toinen.Pistemaara)
-            return 1;
-        else if(this.Pistemaara < toinen.Pistemaara)
             return -1;
+        else if(this.Pistemaara < toinen.Pistemaara)
+            return 1;
         else
             return 0;
     }
