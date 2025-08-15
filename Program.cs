@@ -12,11 +12,7 @@ class Program
 
         Console.WriteLine(pelaaja);
 
-        List<Pelaaja> tyypit = new List<Pelaaja>();
-
-        tyypit.Add(pelaaja);
-
-        tyypit.Add(new Pelaaja("Maija"));
+        List<Pelaaja> tyypit = [pelaaja, new Pelaaja("Maija")];
 
         Console.WriteLine("Anna pelaajan nimi:");
 
